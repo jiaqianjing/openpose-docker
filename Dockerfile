@@ -1,6 +1,9 @@
 # https://hub.docker.com/r/cwaffles/openpose
 FROM nvidia/cuda:10.0-cudnn7-devel
 
+ADD pip.conf /root/.pip/pip.conf
+ENV LANG=C.UTF-8
+
 #get deps
 RUN apt-get update && \
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
