@@ -1,7 +1,8 @@
 # https://hub.docker.com/r/cwaffles/openpose
 FROM nvidia/cuda:10.0-cudnn7-devel
 
-ADD pip.conf /root/.pip/pip.conf
+ADD pip.conf /root/.pip/
+ADD sources.list /etc/apt/
 ENV LANG=C.UTF-8
 
 #get deps
